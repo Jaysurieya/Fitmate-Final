@@ -9,7 +9,7 @@
   import DualScrollPicker from './components/DualScrollPicker';
   import Profile from './components/Profile'; 
   import FloatingChatbot from './components/Chat';
-
+  import About_us from './components/About_us';
   function App() {
 
   return (
@@ -22,6 +22,7 @@
           <Route path='/wheel' element={<DualScrollPicker />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/chat' element={<FloatingChatbot />} />
+          <Route path='/about' element={<About_us />} />
         </Routes>
   );
 }

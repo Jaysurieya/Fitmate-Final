@@ -51,3 +51,41 @@ model and classes in the same folder
 python app.py
 check for the port in the backend and use different port for backend and app.py
 
+code for accessing the camera: ---> navigator.mediaDevices.getUserMedia({ video: true });
+------------------------------
+
+import React, { useRef } from "react";
+
+export default function CameraComponent() {
+  const videoRef = useRef(null);
+
+  const openCamera = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+      if (videoRef.current) {
+        videoRef.current.srcObject = stream;
+        videoRef.current.play();
+      }
+    } catch (error) {
+      console.error("Camera access denied or not available:", error);
+      alert("Unable to access camera. Please allow camera permissions.");
+    }
+  };
+
+  const stopCamera = () => {
+    if (videoRef.current && videoRef.current.srcObject) {
+      let tracks = videoRef.current.srcObject.getTracks();
+      tracks.forEach((track) => track.stop()); // stop all tracks
+      videoRef.current.srcObject = null;
+    }
+  };
+
+  return (
+    <div>
+      <video ref={videoRef} width="400" autoPlay></video>
+      <br />
+      <button onClick={openCamera}>Open Camera</button>
+      <button onClick={stopCamera}>Stop Camera</button>
+    </div>
+  );
+}
