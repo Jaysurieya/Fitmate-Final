@@ -5,7 +5,8 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { signInWithPopup } from "firebase/auth";
-import { auth, googleProvider } from "../../firebase"; 
+import { auth, googleProvider } from "../../firebase";
+
 
 function Login() {
   const navigate = useNavigate();

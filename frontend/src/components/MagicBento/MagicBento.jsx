@@ -16,6 +16,8 @@ import {
 import HealthAnalysisCarousel from "../Analysis.jsx";
 import AnimatedTooltip from "../Tracker_icons.jsx";
 
+let isInsideSection = false;
+
 const DEFAULT_PARTICLE_COUNT = 12;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
 const DEFAULT_GLOW_COLOR = "132, 0, 255";
@@ -352,7 +354,7 @@ const GlobalSpotlight = ({
   glowColor = DEFAULT_GLOW_COLOR,
 }) => {
   const spotlightRef = useRef(null);
-  const isInsSection = useRef(false);
+  const isInsideSection = useRef(false); // <-- FIXED NAME
 
   useEffect(() => {
     if (disableAnimations || !gridRef?.current || !enabled) return;
@@ -393,7 +395,7 @@ const GlobalSpotlight = ({
         e.clientY >= rect.top &&
         e.clientY <= rect.bottom;
 
-      isInsideSection.current = mouseInside || false;
+      isInsideSection.current = mouseInside || false; // <-- FIXED NAME
       const cards = gridRef.current.querySelectorAll(".card");
 
       if (!mouseInside) {
@@ -463,7 +465,7 @@ const GlobalSpotlight = ({
     };
 
     const handleMouseLeave = () => {
-      isInsideSection.current = false;
+      isInsideSection.current = false; // <-- FIXED NAME
       gridRef.current?.querySelectorAll(".card").forEach((card) => {
         card.style.setProperty("--glow-intensity", "0");
       });

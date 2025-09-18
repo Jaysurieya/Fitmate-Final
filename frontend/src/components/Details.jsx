@@ -297,11 +297,15 @@ export const Details = () => {
                                             <p>Suggested healthy weight range: <strong>{calculateHealthyWeightRange().min} - {calculateHealthyWeightRange().max} kg</strong></p>
                                             <p>Your target weight is set to {formData.targetWeight} kg based on your goal to {formData.weightGoal} weight.</p>
                                             {!customTarget && (
-                                                <button onClick={() => setCustomTarget(true)}>Set your own target weight</button>
+                                                <button className="my_button" onClick={() => setCustomTarget(true)}>
+                                                    Set your own target weight
+                                                </button>
                                             )}
                                             {customTarget && (
                                                 <div>
-                                                    <h4>Select your target weight</h4>
+                                                    <button className="my_button">
+                                                        Select your target weight
+                                                    </button>
                                                     <DualScrollPicker_weight onSelectionChange={handleTargetWeightChange} />
                                                 </div>
                                             )}

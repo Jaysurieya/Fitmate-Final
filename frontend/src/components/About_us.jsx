@@ -1,5 +1,7 @@
 import React from "react";
 import { StickyScroll } from "./Scroll_details"; // Adjust the import path as needed
+import { AnimatedTestimonials } from "./testimonals"; // Adjust the import path as needed
+import jay from '../assets/Jaysurieya_me.png'; // Adjust the import path as needed
 
 const content = [
   {
@@ -219,6 +221,40 @@ const content = [
   },
 ];
 
+// Team members data
+const teamMembers = [
+  {
+    quote: "I lead the development team with a passion for creating intuitive health tech solutions. With 8 years of full-stack development experience, I specialize in React, Node.js, and mobile app development.",
+    name: "Alex Thompson",
+    designation: "Lead Developer & Co-Founder",
+    src: jay
+  },
+  {
+    quote: "As a certified nutritionist with 10 years of experience, I ensure all our nutritional data is accurate and evidence-based. I work closely with the development team to create features that truly support healthy eating habits and sustainable lifestyle changes.",
+    name: "Dr. Maria Garcia",
+    designation: "Chief Nutrition Officer",
+    src: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=500&h=500&fit=crop"
+  },
+  {
+    quote: "I bring 12 years of personal training and fitness coaching experience to FitMate. My role is to ensure our goal-setting features align with real-world fitness practices and help users achieve sustainable results through proper guidance and motivation.",
+    name: "James Mitchell",
+    designation: "Head of Fitness Strategy",
+    src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=500&h=500&fit=crop"
+  },
+  {
+    quote: "I focus on creating beautiful, user-friendly interfaces that make health tracking enjoyable rather than overwhelming. With a background in UX psychology, I design experiences that encourage long-term engagement and positive behavior change.",
+    name: "Sophie Chen",
+    designation: "UX/UI Designer",
+    src: "https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=500&h=500&fit=crop"
+  },
+  {
+    quote: "I handle our data architecture and machine learning algorithms that power personalized recommendations. My expertise in health informatics helps us turn complex nutritional data into actionable insights for our users' wellness journeys.",
+    name: "Dr. Ryan Kumar",
+    designation: "Data Science Lead",
+    src: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?q=80&w=500&h=500&fit=crop"
+  }
+];
+
 const About_us = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -234,6 +270,21 @@ const About_us = () => {
 
       {/* Sticky Scroll Content */}
       <StickyScroll content={content} />
+
+      {/* Meet the Team Section */}
+      <div className="bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
+              Meet Our Team
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-300">
+              Get to know the passionate experts behind FitMate who are dedicated to revolutionizing your health and fitness journey
+            </p>
+          </div>
+          <AnimatedTestimonials testimonials={teamMembers} autoplay={true} />
+        </div>
+      </div>
 
       {/* Footer CTA */}
       <div className="bg-gray-900 py-16 text-center text-white">

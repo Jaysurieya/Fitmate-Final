@@ -6,6 +6,7 @@ import ShinyText from './ShinyText/ShinyText';
 import { useNavigate } from 'react-router-dom';
 
 export const Hero = () => {
+  
     const navigate = useNavigate();
     return(
         <div className="app-container">
