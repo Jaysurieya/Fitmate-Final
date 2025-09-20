@@ -3,6 +3,7 @@
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    padding-top: 30px;
   }
   
   .background-container {
@@ -16,17 +17,16 @@
   }
   
   .content-container {
-    position: relative;
-    z-index: 10;
-    color: white;
-    text-align: center;
-    padding-top: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 75vh;
-  }
+  z-index: 10;
+  color: white;
+  text-align: left;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 75vh;
+}
   .flex-row{
     padding-top: 30px;
     display: flex;
@@ -35,10 +35,10 @@
   }
   
   .buttons{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     border: 1px solid white;
     border-radius: 30px;
   }

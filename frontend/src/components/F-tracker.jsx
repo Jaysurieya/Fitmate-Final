@@ -1,59 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Camera, Utensils, Lightbulb, X, Zap, RotateCcw } from "lucide-react";
-
-// GlareHover Component
-const GlareHover = ({ children, width, height, background, borderRadius, borderColor, glareColor }) => {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-  const containerRef = useRef(null);
-
-  const handleMouseMove = (e) => {
-    if (!containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    setMousePos({
-      x: ((e.clientX - rect.left) / rect.width) * 100,
-      y: ((e.clientY - rect.top) / rect.height) * 100
-    });
-  };
-
-  return (
-    <div
-      ref={containerRef}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
-      style={{
-        width,
-        height,
-        background,
-        borderRadius,
-        border: `1px solid ${borderColor || '#444'}`,
-        position: 'relative',
-        overflow: 'hidden',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        cursor: 'pointer',
-        transition: 'all 0.3s ease'
-      }}
-    >
-      {isHovering && (
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: `radial-gradient(circle at ${mousePos.x}% ${mousePos.y}%, ${glareColor || 'rgba(255, 255, 255, 0.3)'} 0%, transparent 50%)`,
-            pointerEvents: 'none'
-          }}
-        />
-      )}
-      {children}
-    </div>
-  );
-};
+import GlareHover from './GlareHover/GlareHover';
 
 const MacroStat = ({ label, value, delay = 0 }) => {
   const [isVisible, setIsVisible] = useState(false);

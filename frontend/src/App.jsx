@@ -10,11 +10,12 @@
   import Profile from './components/Profile'; 
   import FloatingChatbot from './components/Chat';
   import About_us from './components/About_us';
+  import Laser from './components/Laser';
   function App() {
 
   return (
         <Routes>
-           <Route path='/' element={<Hero />} />
+          <Route path='/' element={<Laser />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/dashboard' element={<Dashboard />} />
@@ -23,6 +24,7 @@
           <Route path='/profile' element={<Profile />} />
           <Route path='/chat' element={<FloatingChatbot />} />
           <Route path='/about' element={<About_us />} />
+          <Route path='/laser' element={<Hero/>} />
         </Routes>
   );
 }
