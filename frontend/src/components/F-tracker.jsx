@@ -1,3 +1,4 @@
+//f-tracker
 import React, { useState, useEffect, useRef } from 'react';
 import { Camera, Utensils, Lightbulb, X, Zap, RotateCcw } from "lucide-react";
 import GlareHover from './GlareHover/GlareHover';
