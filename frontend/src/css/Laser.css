@@ -36,3 +36,14 @@
     height: 70%;
   }
 }
+
+/*
+  This query targets extra-small devices like iPhones in portrait mode.
+*/
+@media (max-width: 480px) {
+  .hero-box {
+    
+    font-size: 1rem;
+    flex-direction: column;
+  }
+}

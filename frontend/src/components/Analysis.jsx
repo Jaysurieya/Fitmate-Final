@@ -5,7 +5,6 @@ import { LineChart, Line, BarChart, Bar, AreaChart, Area, XAxis, YAxis, Cartesia
 const HealthAnalysisCarousel = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
-  // Sample data for each analysis
   const sleepData = [
     { day: 'Mon', hours: 7.5, quality: 85 },
     { day: 'Tue', hours: 6.8, quality: 72 },
