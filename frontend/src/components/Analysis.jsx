@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Moon, Pill, Droplet, Footprints, Dumbbell, Scale } from 'lucide-react';
 import { LineChart, Line, BarChart, Bar, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
-
+// analysis
 const HealthAnalysisCarousel = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
