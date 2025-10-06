@@ -10,7 +10,7 @@ const HealthAnalysisCarousel = () => {
     { day: 'Tue', hours: 6.8, quality: 72 },
     { day: 'Wed', hours: 8.2, quality: 92 },
     { day: 'Thu', hours: 7.1, quality: 78 },
-    { day: 'Fri', hours: 6.5, quality: 68 },
+    { day: 'Fri', hours: 6.5, quality: 68 }, 
     { day: 'Sat', hours: 9.1, quality: 95 },
     { day: 'Sun', hours: 8.7, quality: 88 }
   ];

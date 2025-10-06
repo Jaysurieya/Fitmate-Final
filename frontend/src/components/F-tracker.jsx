@@ -230,7 +230,7 @@ const FoodTracker = () => {
 
   const getNutritionFromGemini = async (foodName) => {
   // 1. Define the prompt for the AI model.
-  const prompt = `Provide nutritional information for a standard serving of ${foodName}. 
+  const prompt = `Provide/ Give me nutritional information for a standard serving of ${foodName}. 
   Return ONLY a JSON object with these exact keys: 
   {"protein": number, "fats": number, "carbs": number, "fibre": number, "calories": number}
   Values should be in grams except calories which should be kcal.`;
@@ -238,7 +238,7 @@ const FoodTracker = () => {
   try { 
       // 2. Make the API call to the correct Gemini model endpoint.
       // Replace 'YOUR_API_KEY' with your actual key, but remember to move this to a backend!
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCy1EKkg96qLoLjufMuJE0iAoacx28joJc`, {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyA_NRLvH504vk9CO9NQPFo3Y0kj5Ggg78c`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
